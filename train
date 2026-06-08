@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Мои тренировки</title>
+</head>
+<body>
+  <h1>Тренировка</h1>
+
+  <p>Отжимания: 4 × 15</p>
+
+  <input id="pushups" type="number" placeholder="Сколько сделал">
+  <button onclick="checkResult()">Готово</button>
+
+  <p id="result"></p>
+
+  <script>
+    function checkResult() {
+      let done = Number(document.getElementById("pushups").value);
+      let percent = Math.round(done / 60 * 100);
+
+      document.getElementById("result").innerText =
+        "Выполнение: " + percent + "%";
+    }
+  </script>
+</body>
+</html>
